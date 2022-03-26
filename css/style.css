@@ -1,0 +1,108 @@
+@charset "UTF-8";
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.section-index {
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+}
+
+.section-pasta {
+  background-color: #333333;
+}
+
+.section-pasta-teste {
+  background-color: #f7f7f7;
+}
+
+.section-pasta2 {
+  background-color: #222222;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  background-color: #222222;
+}
+
+.div-conteudo {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+section a {
+  text-decoration: none;
+  color: white;
+}
+
+.link1, .link2 {
+  text-shadow: 7px 7px 5px black;
+}
+.link1:hover, .link2:hover {
+  color: #F5F5F5;
+}
+
+.titulo-pastas {
+  font-size: 0.85rem;
+  color: #A9A9A9;
+  margin-left: 20px;
+}
+
+#pagina {
+  height: 75%;
+  width: 82%;
+  margin-top: 50px;
+}
+
+.btn-notepad {
+  opacity: 0.8;
+}
+
+/*CLASSES FORMATAÇÃO DE TEXTO*/
+.negrito {
+  font-weight: bold;
+}
+
+/*ANIMAÇÃO IMAGEM LÁPIS*/
+/*ANIMAÇÃO PADRAO*/
+.imgGiro1 {
+  animation-name: animar-lapis;
+  animation-duration: 3s;
+  animation-iteration-count: 10000;
+  animation-direction: alternate;
+}
+
+@keyframes animar-lapis {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-60deg);
+  }
+}
+/*ANIMAÇÃO EVENTO 2*/
+.imgGiro2 {
+  animation-name: animar-lapis-giro;
+  animation-duration: 0.68s;
+  animation-iteration-count: 2;
+  /*animation-direction: alternate;*/
+}
+
+@keyframes animar-lapis-giro {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/*------ MEDIA QUERIES -----*/
+@media only screen and (max-width: 550px) {
+  
+}
