@@ -233,40 +233,40 @@ $(document).ready(() => {
 
     let bancodados = new BancoDados()
 
-    $('.btnSalvar').on('click', () => {
-        let texto = $('textarea').val()
-        
-        let informacao = new Informacao(texto)
-
-        if(informacao.validarDados()){
-            bancodados.gravar(informacao)
-
-            $('#tituloModal').html('Obrigado!')
-            $('#tituloModal').addClass('text-secondary')
-            $('#textoModal').html('Arquivo salvo com sucesso.')
-
-
-            $('#eventoModal').modal('show');
-            setTimeout(function () {
-                $('#eventoModal').modal('hide')
-            }, 3000);
-
-            $('textarea').val('')
+        $('.btnSalvar').on('click', () => {
+            let texto = $('textarea').val()
             
-        }else {
+            let informacao = new Informacao(texto)
 
-            $('#tituloModal').html('Atenção!')
-            $('#tituloModal').addClass('text-secondary')
-            $('#textoModal').html('Não existe texto para ser salvo.')
+            if(informacao.validarDados()){
+                bancodados.gravar(informacao)
+
+                $('#tituloModal').html('Obrigado!')
+                $('#tituloModal').addClass('text-secondary')
+                $('#textoModal').html('Arquivo salvo com sucesso.')
 
 
-            $('#eventoModal').modal('show');
-            setTimeout(function () {
-                $('#eventoModal').modal('hide')
-            }, 3000);
-        }
-        
-    })
+                $('#eventoModal').modal('show');
+                setTimeout(function () {
+                    $('#eventoModal').modal('hide')
+                }, 3000);
+
+                $('textarea').val('')
+                
+            }else {
+
+                $('#tituloModal').html('Atenção!')
+                $('#tituloModal').addClass('text-secondary')
+                $('#textoModal').html('Não existe texto para ser salvo.')
+
+
+                $('#eventoModal').modal('show');
+                setTimeout(function () {
+                    $('#eventoModal').modal('hide')
+                }, 3000);
+            }
+            
+        })
 
     $('.btnCancelar').on('click', () => {
         $('#eventoModalDelete').modal('show')
